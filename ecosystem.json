@@ -1,0 +1,15 @@
+{
+	"apps": [
+		{
+			"name": "project-name",
+			"interpreter": "bun",
+			"env": {
+				"NODE_ENV": "production",
+				"PORT": "3000",
+				"HOST": "127.0.0.1"
+			},
+			"script": "build/index.js",
+			"log_date_format": "YYYY-MM-DD HH:mm:ss"
+		}
+	]
+}
