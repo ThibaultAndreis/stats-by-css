@@ -45,6 +45,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"mariadb": "^3.2.2",
 		"tldts": "^6.0.19"
 	}
 }
