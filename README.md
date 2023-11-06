@@ -1,99 +1,19 @@
-# Custom Sveltekit template
+# Stats by css
 
-This is my custom sveltekit template
+Get your website statistics without any javascript!
 
-It includes tailwind, i18n, dark theme management, superforms, pm2 and prettier v2.8 as v3 is broken
+## How?
 
-## Creating a project
+just use css
 
-Git clone this project, then change the upstream repo to your own.
+## Why?
 
-```bash
+yes.
 
-git clone git@github.com:ThibaultAndreis/sveltekit-template.git  ./<your project name>
+## Is it a good idea ?
 
-cd <your project name>
+Probably not
 
-git remote set-url <your project upstream url>
+## So why?
 
-pnpm install
-
-pnpm dev
-```
-
-## Development
-
-All styles tags should have the lang=postcss param
-
-```sveltehtml
-<style lang="postcss">
-  /*
-    Your style
-  */
-</style>
-```
-
-All script tags should have the lang=ts param
-```sveltehtml
-<script lang="ts">
-  /*
-    Your script
-  */
-</script>
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-pnpm run build
-```
-
-Don't forget to change your application name in the package.json and ecosystem.json files
-
-Currently, the template use the bun adapter and interpreter.
-
-it can easily be changed to node :
-
-```typescript
-//In svelte.config.js
-
-import { vitePreprocess } from '@sveltejs/kit/vite';
-- import adapter from 'svelte-adapter-bun';
-+ import adapter from '@sveltejs/adapter-node';
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-  preprocess: vitePreprocess(),
-
-  kit: {
-    adapter: adapter({
-      precompress: true
-    })
-  }
-};
-
-export default config;
-
-```
-
-
-```json5
-//In ecosystem.json
-{
-  "apps": [
-  {
-    "name": "project-name",
-    - "interpreter": "bun",
-    + "interpreter": "node",
-    "env": {
-      "NODE_ENV": "production",
-      "PORT": "3000",
-      "HOST": "127.0.0.1"
-    },
-    "script": "build/index.js",
-    "log_date_format": "YYYY-MM-DD HH:mm:ss"
-  }
-]
-}
-```
+After reading [this article](https://herman.bearblog.dev/how-bear-does-analytics-with-css/) I wondered if I could do this on an entire site, adding different action types and having a complete user interaction session
