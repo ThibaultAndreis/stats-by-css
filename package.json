@@ -45,6 +45,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"chart.js": "^4.4.0",
 		"mariadb": "^3.2.2",
 		"tldts": "^6.0.19"
 	}

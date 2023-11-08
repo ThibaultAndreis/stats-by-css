@@ -12,7 +12,9 @@ const pool = mariadb.createPool({
 	password: DATABASE_PASSWORD,
 	connectionLimit: 5,
 	trace: true,
-	database: DATABASE_NAME
+	database: DATABASE_NAME,
+	bigIntAsNumber: true,
+	decimalAsNumber: true
 });
 
 export async function query(query: string, values?: string[]) {
@@ -25,7 +27,7 @@ export async function query(query: string, values?: string[]) {
 	}
 }
 
-export async function exec(query: string, values: (string | number)[] | null = null) {
+export async function exec(query: string, values: (string | number | null)[] | null = null) {
 	let conn;
 	try {
 		conn = await pool.getConnection();
